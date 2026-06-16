@@ -1,5 +1,4 @@
-TECH = "TECH"
-SUPER_TECH = "SUPER_TECH"
+from data import TECH, SUPER_TECH
 
 chips = {
     "Hedge BURG.L Chip": {"TIER": SUPER_TECH},
