@@ -1,7 +1,7 @@
-﻿from data import EXPLOSIVES_REQUIRED, UNDERWATER, TIER_2_KNIFE_REQUIRED, TIER_3_AXE_REQUIRED, KEY_REQUIRED
+﻿from data import EXPLOSIVES_REQUIRED, UNDERWATER, TIER_2_KNIFE_REQUIRED, TIER_3_AXE_REQUIRED
+from data import STICKY_KEY_REQUIRED, MOSSY_KEY_REQUIRED, MINOTAUR_MAZE_KEY_REQUIRED, MELTED_MOAT_KEY_REQUIRED
+from data import MILK_MOLARS, MEGA_MILK_MOLARS
 
-MILK_MOLARS = "MILK_MOLARS"
-MEGA_MILK_MOLARS = "MEGA_MILK_MOLARS"
 
 milk_molars = {
     "Milk Molar : Under a soda can": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
@@ -30,7 +30,7 @@ milk_molars = {
     "Milk Molar : Inside lunch box": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
     "Milk Molar : Behind the sandbox": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
     "Milk Molar : On top of sand castle's tallest tower": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
-    "Milk Molar : Chest inside moat": {"TYPE": MILK_MOLARS, "REQUIREMENTS": [UNDERWATER, KEY_REQUIRED]},
+    "Milk Molar : Chest inside moat": {"TYPE": MILK_MOLARS, "REQUIREMENTS": [UNDERWATER, MELTED_MOAT_KEY_REQUIRED]},
     "Milk Molar : Behind Yoked Girth toy box": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
     "Milk Molar : Inside black anthill 1": {"TYPE": MILK_MOLARS, "REQUIREMENTS": [EXPLOSIVES_REQUIRED]},
     "Milk Molar : Inside black anthill 2": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
@@ -88,6 +88,10 @@ milk_molars = {
     "Milk Molar : Undershed area, next to a wall": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
     "Milk Molar : Undershed area, on a support": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
     "Milk Molar : Undershed area, on a wooden ledge with spiderwebs": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
+    "Milk Molar : Inside the Brawmy Boy Bin, in a small crevice": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
+    "Milk Molar : Inside the Brawmy Boy Bin, by a black widow": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
+    "Milk Molar : Inside the Brawmy Boy Bin, behind a pile of books": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
+    "Milk Molar : Inside the Brawmy Boy Bin, on top of the Dismantled TAYZ.T": {"TYPE": MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Over a soda can": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Spade gulch cave": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Canyon 1": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
@@ -98,7 +102,7 @@ milk_molars = {
     "Mega Milk Molar : Hedge lab spiral ground access, on a branch": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Next to rock wall, ground level 1": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : T-Rex cave treasure chest":
-        {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": [UNDERWATER, KEY_REQUIRED]},
+        {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": [UNDERWATER, MOSSY_KEY_REQUIRED]},
     "Mega Milk Molar : T-Rex cave, right wall after the 1st turbine":
         {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": [UNDERWATER, TIER_2_KNIFE_REQUIRED]},
     "Mega Milk Molar : Next to rock wall, ground level 2": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
@@ -106,11 +110,11 @@ milk_molars = {
         {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": [UNDERWATER, TIER_2_KNIFE_REQUIRED]},
     "Mega Milk Molar : Inside a footprint under the picnic table": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Chest on Minotaurs & Myrmidons board game":
-        {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": [KEY_REQUIRED]},
+        {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": [MINOTAUR_MAZE_KEY_REQUIRED]},
     "Mega Milk Molar : Inside antlion cave": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Inside cactus pot, on sandbox border": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
-    "Mega Milk Molar : Inside a flooded pipe":
-        {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": [UNDERWATER, KEY_REQUIRED]},
+    # "Mega Milk Molar : Inside a flooded pipe":
+    #     {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": [UNDERWATER, KEY_REQUIRED]},
     "Mega Milk Molar : Trash pile": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Inside a flooded soda can": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Inside black anthill 1": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": [EXPLOSIVES_REQUIRED]},
@@ -142,4 +146,15 @@ milk_molars = {
     "Mega Milk Molar : On top of some rocks on the ravine wall": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Over the insulating foam": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
     "Mega Milk Molar : Undershed area, black widow lair": {"TYPE": MEGA_MILK_MOLARS, "REQUIREMENTS": []},
+}
+
+augmentations = {
+    "Max Health": {"TYPE": MILK_MOLARS, "PHASES": 6},
+    "Max Stamina": {"TYPE": MILK_MOLARS, "PHASES": 5},
+    "Hunger/Thirst Drain": {"TYPE": MILK_MOLARS, "PHASES": 5},
+    "Healing": {"TYPE": MILK_MOLARS, "PHASES": 5},
+    "Max Active Mutations": {"TYPE": MILK_MOLARS, "PHASES": 3},
+    "Max Consumable Stack Size": {"TYPE": MEGA_MILK_MOLARS, "PHASES": 5},
+    "Max Resource Stack Size": {"TYPE": MEGA_MILK_MOLARS, "PHASES": 5},
+    "Max Arrow Stack Size": {"TYPE": MEGA_MILK_MOLARS, "PHASES": 5},
 }
