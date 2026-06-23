@@ -1,4 +1,4 @@
-﻿from data import EXPLOSIVES_REQUIRED, UNDERWATER, TIER_2_KNIFE_REQUIRED
+﻿from data import EXPLOSIVES_REQUIRED, UNDERWATER, TIER_2_KNIFE_REQUIRED, WATER_LIGHTING
 from data import TIER_1_SHOVEL_REQUIRED, TIER_2_SHOVEL_REQUIRED
 from data import TIER_1_HAMMER_REQUIRED, TIER_2_HAMMER_REQUIRED, TIER_3_HAMMER_REQUIRED
 from data import TIER_1_AXE_REQUIRED, TIER_2_AXE_REQUIRED, TIER_3_AXE_REQUIRED
@@ -80,16 +80,24 @@ tools = {
     "Spiky Sprig": {"CATEGORY": MELEE, "TIER": 1, "DAMAGE_TYPES": [BLEED], "GRANTS": []},
     "Larva Blade": {"CATEGORY": MELEE, "TIER": 1, "DAMAGE_TYPES": [POISON], "GRANTS": []},
     # Busting
-    "Black Ox Hammer": {"CATEGORY": BUSTING, "TIER": 3, "DAMAGE_TYPES": [], "GRANTS": [TIER_3_HAMMER_REQUIRED]},
-    "Insect Hammer": {"CATEGORY": BUSTING, "TIER": 2, "DAMAGE_TYPES": [], "GRANTS": [TIER_2_HAMMER_REQUIRED]},
-    "Pebblet Hammer": {"CATEGORY": BUSTING, "TIER": 1, "DAMAGE_TYPES": [], "GRANTS": [TIER_1_HAMMER_REQUIRED]},
+    "Black Ox Hammer": {"CATEGORY": BUSTING, "TIER": 3, "DAMAGE_TYPES": [],
+                        "GRANTS": [TIER_1_HAMMER_REQUIRED, TIER_2_HAMMER_REQUIRED, TIER_3_HAMMER_REQUIRED]},
+    "Insect Hammer": {"CATEGORY": BUSTING, "TIER": 2, "DAMAGE_TYPES": [],
+                      "GRANTS": [TIER_1_HAMMER_REQUIRED, TIER_2_HAMMER_REQUIRED]},
+    "Pebblet Hammer": {"CATEGORY": BUSTING, "TIER": 1, "DAMAGE_TYPES": [],
+                       "GRANTS": [TIER_1_HAMMER_REQUIRED]},
     # Chopping
-    "Termite Axe": {"CATEGORY": CHOPPING, "TIER": 3, "DAMAGE_TYPES": [], "GRANTS": [TIER_3_AXE_REQUIRED]},
-    "Insect Axe": {"CATEGORY": CHOPPING, "TIER": 2, "DAMAGE_TYPES": [], "GRANTS": [TIER_2_AXE_REQUIRED]},
-    "Pebblet Axe": {"CATEGORY": CHOPPING, "TIER": 1, "DAMAGE_TYPES": [], "GRANTS": [TIER_1_AXE_REQUIRED]},
+    "Termite Axe": {"CATEGORY": CHOPPING, "TIER": 3, "DAMAGE_TYPES": [],
+                    "GRANTS": [TIER_1_AXE_REQUIRED, TIER_2_AXE_REQUIRED, TIER_3_AXE_REQUIRED]},
+    "Insect Axe": {"CATEGORY": CHOPPING, "TIER": 2, "DAMAGE_TYPES": [],
+                   "GRANTS": [TIER_1_AXE_REQUIRED, TIER_2_AXE_REQUIRED]},
+    "Pebblet Axe": {"CATEGORY": CHOPPING, "TIER": 1, "DAMAGE_TYPES": [],
+                    "GRANTS": [TIER_1_AXE_REQUIRED]},
     # Digging
-    "Black Ant Shovel": {"CATEGORY": DIGGING, "TIER": 2, "DAMAGE_TYPES": [], "GRANTS": [TIER_2_SHOVEL_REQUIRED]},
-    "Acorn Shovel": {"CATEGORY": DIGGING, "TIER": 1, "DAMAGE_TYPES": [], "GRANTS": [TIER_1_SHOVEL_REQUIRED]},
+    "Black Ant Shovel": {"CATEGORY": DIGGING, "TIER": 2, "DAMAGE_TYPES": [],
+                         "GRANTS": [TIER_1_SHOVEL_REQUIRED, TIER_2_SHOVEL_REQUIRED]},
+    "Acorn Shovel": {"CATEGORY": DIGGING, "TIER": 1, "DAMAGE_TYPES": [],
+                     "GRANTS": [TIER_1_SHOVEL_REQUIRED]},
     # Ranged
     "Splinter Arrow": {"CATEGORY": RANGED, "TIER": 3, "DAMAGE_TYPES": [], "GRANTS": []},
     "Super Gas Arrow": {"CATEGORY": RANGED, "TIER": 3, "DAMAGE_TYPES": [GAS_HAZARD], "GRANTS": []},
@@ -145,8 +153,8 @@ tools = {
     "Bone Dagger": {"CATEGORY": UNDERWATER, "TIER": 2, "DAMAGE_TYPES": [], "GRANTS": [UNDERWATER, TIER_2_KNIFE_REQUIRED]},
     "Bone Trident": {"CATEGORY": UNDERWATER, "TIER": 2, "DAMAGE_TYPES": [], "GRANTS": [UNDERWATER]},
     "Pebblet Dagger": {"CATEGORY": UNDERWATER, "TIER": 1, "DAMAGE_TYPES": [], "GRANTS": [UNDERWATER]},
-    "Slime Lantern": {"CATEGORY": UNDERWATER, "TIER": 0, "DAMAGE_TYPES": [], "GRANTS": [UNDERWATER]},
-    "Slime Lantern+": {"CATEGORY": UNDERWATER, "TIER": 0, "DAMAGE_TYPES": [], "GRANTS": [UNDERWATER]},
+    "Slime Lantern": {"CATEGORY": UNDERWATER, "TIER": 0, "DAMAGE_TYPES": [], "GRANTS": [WATER_LIGHTING]},
+    "Slime Lantern+": {"CATEGORY": UNDERWATER, "TIER": 0, "DAMAGE_TYPES": [], "GRANTS": [WATER_LIGHTING]},
     # Misc
     "Decoy Bait": {"CATEGORY": MISC, "TIER": 0, "DAMAGE_TYPES": [], "GRANTS": []},
     "Basketball": {"CATEGORY": MISC, "TIER": 0, "DAMAGE_TYPES": [], "GRANTS": []},

@@ -9,9 +9,9 @@ key_items = {
     "ZIP.R":
         {"REQUIREMENTS": [MANAGER_AREA_ACCESS], "GRANTS": []},
     "SCA.B Replacement Fuse":
-        {"REQUIREMENTS": [{"type": SUPER_TECH, "count": 4}, TIER_3_HAMMER_REQUIRED], "GRANTS": [FINAL_ZONE_ACCESS]},
+        {"REQUIREMENTS": [{"TYPE": SUPER_TECH, "COUNT": 4}, TIER_3_HAMMER_REQUIRED], "GRANTS": [FINAL_ZONE_ACCESS]},
     "Embiggening Cell":
-        {"REQUIREMENTS": [{"type": SUPER_TECH, "count": 2}], "GRANTS": [FINAL_EVENT_ACCESS]},
+        {"REQUIREMENTS": [{"TYPE": SUPER_TECH, "COUNT": 2}], "GRANTS": [FINAL_EVENT_ACCESS]},
     "Password Scribble: Y--":
         {"REQUIREMENTS": [], "GRANTS": []},
     "Password Scribble: -UR":
